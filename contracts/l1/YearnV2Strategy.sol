@@ -22,15 +22,15 @@ contract YearnV2Strategy {
     uint256 constant MESSAGE_WITHDRAWAL_REQUEST = 1;
     uint256 constant MESSAGE_DEPOSIT_REQUEST = 2;
 
-    // The selector of the "handle_distribute_underlying" l1_handler.
+    //  from starkware.starknet.compiler.compile import get_selector_from_name
     //  print(get_selector_from_name('handle_distribute_underlying'))
     uint256 constant DISTRIBUTE_UNDERLYING_SELECTOR =
-        3520401815844567356085155807608885419463728554843487745; //(dummy value)
+        823752107113310000093673478517431453452746400890662466658548911690286052542; //(dummy value)
 
-    // The selector of the "handle_distribute_share" l1_handler.
+    //  from starkware.starknet.compiler.compile import get_selector_from_name
     //  print(get_selector_from_name('handle_distribute_share'))
     uint256 constant DISTRIBUTE_SHARES_SELECTOR =
-        3520401815844567356085155807608885419463728554843487745; //(dummy value)
+        43158444020691042243121819418379972480051290998360791401029726400163460126; //(dummy value)
 
     address public immutable  underlying;
     address public governor;
