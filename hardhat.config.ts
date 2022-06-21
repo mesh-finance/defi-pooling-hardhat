@@ -3,13 +3,15 @@
  */
  import { task } from "hardhat/config";
  import "@nomiclabs/hardhat-waffle";
+ import 'dotenv/config'
+ const MAINNET_RPC_UPL = process.env.MAINNET_RPC_URL;
  export default  {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
       // If you want to do some forking set `enabled` to true
       forking: {
-        url: "https://speedy-nodes-nyc.moralis.io/7ef5d24e2c4157673144f3de/eth/mainnet",
+        url: MAINNET_RPC_UPL,
         blockNumber: 14758829,
         enabled: false,
       },
