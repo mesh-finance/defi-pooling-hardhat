@@ -54,7 +54,7 @@ contract YearnV2Strategy {
     event DistributedOnL2(uint256 withdrawId, uint256 bridgedAmount);
 
 
-    constructor(address _underlying, address _yVault, address _starknetCore, uint256 _l2Contract, address _starknetERC20Bridge) public {
+    constructor(address _underlying, address _yVault, address _starknetCore, uint256 _l2Contract, address _starknetERC20Bridge) {
         require(_underlying != address(0), "underlying cannot be empty");
         require(_yVault != address(0), "Yearn Vault cannot be empty");
         require(
