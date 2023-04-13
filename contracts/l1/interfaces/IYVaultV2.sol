@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.7.0;
+
+interface IYVaultV2 {
+    // ERC20 part
+    function balanceOf(address) external view returns (uint256);
+
+    function decimals() external view returns (uint256);
+
+    // VaultV2 view interface
+    function token() external view returns (address);
+
+    function emergencyShutdown() external view returns (bool);
+
+    function pricePerShare() external view returns (uint256);
+
+    // VaultV2 user interface
+    function deposit(uint256 amount) external returns (uint256);
+
+    function withdraw(uint256 amount) external;
+}
